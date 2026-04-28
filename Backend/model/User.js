@@ -58,14 +58,14 @@ const UserSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    Address:[AddressSchema],
+    Address:AddressSchema,
     EmailVerified:{
         type:Boolean,
         default:false,
     },
     NumberVerified:{
         type:Boolean,
-        defaulr:false
+        default:false
     }
 },{timestamps:true})
 

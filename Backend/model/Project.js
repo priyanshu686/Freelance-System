@@ -5,9 +5,9 @@ const ProjectSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    ProjectOwnweId:{
+    ProjectOwnerId:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: User,
+        ref: 'User',
         required:true
     },
     TechStack:{
