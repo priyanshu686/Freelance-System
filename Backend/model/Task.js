@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const TaskSchema = new mongoose.Schema({
     ProjectId:{
         type: mongoose.Schema.Types.ObjectId,
-        ref:Project,
+        ref:'Project',
         required:true
     },
     TaskName:{

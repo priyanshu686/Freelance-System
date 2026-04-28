@@ -3,12 +3,12 @@ import mongoose from 'mongoose'
 const TaskAssignSchema = new mongoose.Schema({
     TaskId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:Task,
+        ref:'Task',
         required:true
     },
     AssignTo:{
         type:[mongoose.Schema.Types.ObjectId],
-        ref:User,
+        ref:'User',
         required:Task
     }
 })
