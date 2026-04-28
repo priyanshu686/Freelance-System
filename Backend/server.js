@@ -3,11 +3,19 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoutes from './routes/userRoutes.js'
 import projectRoutes from './routes/projectRoutes.js'
-
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
 dotenv.config();
+
+app.use(cors({
+  origin: [
+    "http://localhost:4200"
+  ],
+  credentials: true,
+}));
+
 
 app.use("/api/user",userRoutes);
 app.use("/api/project",projectRoutes);
